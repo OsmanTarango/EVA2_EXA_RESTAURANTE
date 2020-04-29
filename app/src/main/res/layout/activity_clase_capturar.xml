@@ -90,5 +90,6 @@
         android:layout_weight="1"
         android:padding="10sp"
         android:text="Guardar"
+        android:onClick="guardar"
         android:textColor="#020101" />
 </LinearLayout>

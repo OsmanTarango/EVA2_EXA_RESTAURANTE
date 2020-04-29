@@ -17,11 +17,10 @@ public class Restaurante extends AppCompatActivity {
     TextView txtVwTitulo;
     ListView lstVwRest;
 
-    GetRestaurant[] rests = {
-
+/*    GetRestaurant[] rests = {
             new GetRestaurant("Restaurant a", "Descripcion a", "Dir y Tel a", R.drawable.rest),
             new GetRestaurant("Restaurant b", "Descripcion b", "Dir y Tel b", R.drawable.rest),
-    };
+    };*/
 
 
     @Override
@@ -30,21 +29,25 @@ public class Restaurante extends AppCompatActivity {
         setContentView(R.layout.activity_restaurante);
         txtVwTitulo = findViewById(R.id.txtVwTitulo);
         lstVwRest = findViewById(R.id.lstVwRest);
-        RestaurantAdapter ra = new RestaurantAdapter(this, R.layout.rest_layout, rests );
+        RestaurantAdapter ra = new RestaurantAdapter(this, R.layout.rest_layout, GetRestaurant.rests );
         lstVwRest.setAdapter(ra);
         lstVwRest.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 inDatos = new Intent(getApplicationContext(), Evaluacion.class);
-                inDatos.putExtra("Nomb", rests[position].getNomb());
-                inDatos.putExtra("Desc", rests[position].getDesc());
-                inDatos.putExtra("DirTel", rests[position].getDirTel());
+                inDatos.putExtra("Nomb", GetRestaurant.rests[position].getNomb());
+                inDatos.putExtra("Desc", GetRestaurant.rests[position].getDesc());
+                inDatos.putExtra("DirTel", GetRestaurant.rests[position].getDirTel());
                 startActivityForResult(inDatos, 1);
+
             }
         });
 
-
+                int imagen = getIntent().getIntExtra("imagen", 0);
+                String nombre = getIntent().getStringExtra("nombre"),
+                descripcion = getIntent().getStringExtra("descripcion"),
+                direccion = getIntent().getStringExtra("direccion");
     }
 
     @Override

@@ -4,7 +4,7 @@ public class GetRestaurant {
 
     private String nomb, desc, dirTel;
     private int icon;
-
+    static GetRestaurant[] rests = {};
 
     public GetRestaurant(String nomb, String desc, String dirTel, int icon) {
         this.nomb = nomb;

@@ -14,12 +14,12 @@ import android.widget.Toast;
 
 public class ClaseCapturar extends AppCompatActivity {
     EditText nom, desc, dir;
-    String nombre, descripcion, direccion;
-    int imagen;
+    static String nombre, descripcion, direccion;
+    static int imagen;
     ImageView img;
     Intent intSelImg;
     final int im = 2;
-    Restaurantes xd = new Restaurantes(imagen,nombre, descripcion, direccion);
+    static Restaurantes xd = new Restaurantes(imagen,nombre, descripcion, direccion);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,5 +61,9 @@ public class ClaseCapturar extends AppCompatActivity {
         xd.setDescripcion(descripcion);
         xd.setDireccion(direccion);
 
+        GetRestaurant.rests = new GetRestaurant[]{
+                new GetRestaurant(xd.getNombre(), xd.getDescripcion(), xd.getDireccion(), xd.getImagen())
+        };
+        finish();
     }
 }

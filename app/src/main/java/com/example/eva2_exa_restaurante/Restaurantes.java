@@ -6,11 +6,14 @@ public class Restaurantes {
     public String descripcion;
     public String direccion;
 
+//static Restaurantes[] array;
+
     public Restaurantes(int imagen, String nombre, String descripcion, String direccion) {
         this.imagen = imagen;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.direccion = direccion;
+        //Restaurantes[] array = new Restaurantes{imagen, nombre, descripcion, direccion};
     }
 
     public int getImagen() {
@@ -44,4 +47,8 @@ public class Restaurantes {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+/**
+    public void llenarArray(int imagen, String nombre, String descripcion, String direccion){
+        array = new Restaurantes{imagen, nombre, descripcion, direccion};
+    }**/
 }
