@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">EVA2_EXA_RESTAURANTE</string>
+    <string name="textview">TextView</string>
 </resources>
