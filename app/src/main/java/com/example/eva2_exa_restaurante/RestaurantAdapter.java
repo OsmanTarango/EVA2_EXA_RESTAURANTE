@@ -13,13 +13,13 @@ import androidx.annotation.Nullable;
 
 import org.w3c.dom.Text;
 
-public class RestaurantAdapter extends ArrayAdapter <Restaurant> {
-    Restaurant [] objects;
+public class RestaurantAdapter extends ArrayAdapter <GetRestaurant> {
+    GetRestaurant [] objects;
     Context context;
     int resource;
 
 
-    public RestaurantAdapter(@NonNull Context context, int resource, @NonNull Restaurant[] objects) {
+    public RestaurantAdapter(@NonNull Context context, int resource, @NonNull GetRestaurant[] objects) {
         super(context, resource, objects);
         this.objects= objects;
         this.resource = resource;
@@ -48,9 +48,16 @@ public class RestaurantAdapter extends ArrayAdapter <Restaurant> {
         txtVwDesc.setText(objects[position].getDesc());
         txtVwDirTel.setText(objects[position].getDirTel());
 
+
+
         return convertView;
 
 
+    }
+
+    public void actualizar(GetRestaurant [] rest) {
+        this.objects = rest;
+        this.notifyDataSetChanged();
     }
 
 }

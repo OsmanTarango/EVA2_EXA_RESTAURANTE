@@ -12,13 +12,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class Restaurante extends AppCompatActivity {
     Intent inDatos;
     TextView txtVwTitulo;
     ListView lstVwRest;
-    Restaurant[] rests = {
-            new Restaurant("Restaurant a", "Descripcion a", "Dir y Tel a", R.drawable.rest),
-            new Restaurant("Restaurant b", "Descripcion b", "Dir y Tel b", R.drawable.rest),
+
+    GetRestaurant[] rests = {
+
+            new GetRestaurant("Restaurant a", "Descripcion a", "Dir y Tel a", R.drawable.rest),
+            new GetRestaurant("Restaurant b", "Descripcion b", "Dir y Tel b", R.drawable.rest),
     };
 
 
@@ -28,7 +30,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         txtVwTitulo = findViewById(R.id.txtVwTitulo);
         lstVwRest = findViewById(R.id.lstVwRest);
-        lstVwRest.setAdapter(new RestaurantAdapter(this, R.layout.rest_layout, rests));
+        RestaurantAdapter ra = new RestaurantAdapter(this, R.layout.rest_layout, rests );
+        lstVwRest.setAdapter(ra);
         lstVwRest.setOnItemClickListener(new ListView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -51,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         if(resultCode == Activity.RESULT_OK) {
             switch (data.getStringExtra("Star")) {
                 case "1":
+
                     Toast.makeText(this, "1 Estrella", Toast.LENGTH_SHORT).show();
                     break;
                 case "2":

@@ -1,12 +1,12 @@
 package com.example.eva2_exa_restaurante;
 
-public class Restaurant {
+public class GetRestaurant {
 
     private String nomb, desc, dirTel;
     private int icon;
 
 
-    public Restaurant (String nomb, String desc, String dirTel, int icon) {
+    public GetRestaurant(String nomb, String desc, String dirTel, int icon) {
         this.nomb = nomb;
         this.desc = desc;
         this.dirTel = dirTel;
@@ -14,22 +14,21 @@ public class Restaurant {
     }
 
 
-public String getNomb () {
+    public String getNomb() {
         return nomb;
     }
-    public String getDesc () {
+
+    public String getDesc() {
         return desc;
     }
 
-    public String getDirTel () {
+    public String getDirTel() {
         return dirTel;
     }
 
-    public int getIcon () {
+    public int getIcon() {
         return icon;
     }
-
-
 
 
 }
