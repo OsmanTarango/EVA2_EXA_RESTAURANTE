@@ -8,8 +8,15 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtVwTitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/textview" />
+        android:gravity="center"
+        android:text="SELECCIONA TU RESTAURANTE"
+        android:textSize="25sp" />
+
+    <ListView
+        android:id="@+id/lstVwRest"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
