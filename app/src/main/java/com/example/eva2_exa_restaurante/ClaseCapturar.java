@@ -13,9 +13,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 public class ClaseCapturar extends AppCompatActivity {
-    EditText nom = findViewById(R.id.etNombre),
-             desc = findViewById(R.id.etDescripcion),
-             dir = findViewById(R.id.etDireccion);
+    EditText nom, desc, dir;
     String nombre, descripcion, direccion;
     int imagen;
     ImageView img;
@@ -30,6 +28,9 @@ public class ClaseCapturar extends AppCompatActivity {
         img = findViewById(R.id.imageView);
         intSelImg = new Intent(this, ClaseSelImg.class);
 
+        nom = findViewById(R.id.etNombre);
+        desc = findViewById(R.id.etDescripcion);
+        dir = findViewById(R.id.etDireccion);
 
     }
 
@@ -51,6 +52,7 @@ public class ClaseCapturar extends AppCompatActivity {
     }
 
     public void guardar(View v){
+        
         nombre = nom.getText().toString();
         descripcion = desc.getText().toString();
         direccion = dir.getText().toString();

@@ -1,10 +1,10 @@
 package com.example.eva2_exa_restaurante;
 
 public class Restaurantes {
-    private int imagen;
-    private String nombre;
-    private String descripcion;
-    private String direccion;
+    public int imagen;
+    public String nombre;
+    public String descripcion;
+    public String direccion;
 
     public Restaurantes(int imagen, String nombre, String descripcion, String direccion) {
         this.imagen = imagen;
