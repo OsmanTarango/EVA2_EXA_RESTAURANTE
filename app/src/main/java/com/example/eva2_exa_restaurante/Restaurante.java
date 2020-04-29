@@ -43,11 +43,7 @@ public class Restaurante extends AppCompatActivity {
 
             }
         });
-
-                int imagen = getIntent().getIntExtra("imagen", 0);
-                String nombre = getIntent().getStringExtra("nombre"),
-                descripcion = getIntent().getStringExtra("descripcion"),
-                direccion = getIntent().getStringExtra("direccion");
+        
     }
 
     @Override
