@@ -35,12 +35,13 @@ public class RestaurantAdapter extends ArrayAdapter <Restaurant> {
         }
 
         ImageView imgVwIcon;
-        TextView txtVwNomb, txtVwDesc, txtVwDirTel;
+        TextView txtVwNomb, txtVwDesc, txtVwDirTel, txtVwEstrellas;
 
         imgVwIcon= convertView.findViewById(R.id.imgVwIcon);
         txtVwNomb= convertView.findViewById(R.id.txtVwNomb);
         txtVwDesc= convertView.findViewById(R.id.txtVwDesc);
         txtVwDirTel= convertView.findViewById(R.id.txtVwDirTel);
+        txtVwEstrellas = convertView.findViewById(R.id.txtVwEstrellas);
 
         imgVwIcon.setImageResource(objects[position].getIcon());
         txtVwNomb.setText(objects[position].getNomb());
