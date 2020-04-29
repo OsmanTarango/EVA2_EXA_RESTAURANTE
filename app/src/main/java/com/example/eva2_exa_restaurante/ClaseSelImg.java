@@ -15,7 +15,7 @@ import android.widget.ListView;
 public class ClaseSelImg extends AppCompatActivity{
     ListView listView;
 
-    int[] imagenes = {R.drawable.img,
+    int[] fruitImages = {R.drawable.img,
                          R.drawable.img2,
                          R.drawable.img3,
                          R.drawable.img4,
@@ -39,7 +39,7 @@ public class ClaseSelImg extends AppCompatActivity{
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Intent intent = new Intent(getApplicationContext(), ListDataActivity.class);
-                intent.putExtra("image",imagenes[i]);
+                intent.putExtra("image",fruitImages[i]);
                 setResult(Activity.RESULT_OK, intent);
                 finish();
 
@@ -49,7 +49,7 @@ public class ClaseSelImg extends AppCompatActivity{
     private class CustomAdapter extends BaseAdapter {
         @Override
         public int getCount() {
-            return imagenes.length;
+            return fruitImages.length;
         }
 
         @Override
@@ -67,7 +67,7 @@ public class ClaseSelImg extends AppCompatActivity{
             View view1 = getLayoutInflater().inflate(R.layout.row_data,null);
             //getting view in row_data
             ImageView image = view1.findViewById(R.id.images);
-            image.setImageResource(imagenes[i]);
+            image.setImageResource(fruitImages[i]);
             return view1;
 
 

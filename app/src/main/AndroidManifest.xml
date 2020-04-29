@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListDataActivity"></activity>
+        <activity android:name=".Restaurante"></activity>
+        <activity android:name=".RestaurantAdapter" />
+        <activity android:name=".Evaluacion" />
+        <activity android:name=".ListDataActivity" />
         <activity android:name=".ClaseSelImg" />
         <activity android:name=".ClaseCapturar" />
         <activity android:name=".MainActivity">
